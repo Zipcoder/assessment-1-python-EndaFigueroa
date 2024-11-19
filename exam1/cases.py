@@ -20,5 +20,18 @@ Now make one that does the opposite: snake2camel()
 '''
 
 
-def foo():
-    pass
+def camel2snake(word):
+    answer =""
+    for letter in word:
+        if letter.isupper() == True:
+            answer +="_"+letter.lower
+        else:answer +=letter
+    return answer
+    
+def snake2camel(word):
+    answer=""
+    for letter in word:
+        if letter is "_":
+            answer +=letter[+1].upper
+        else: answer +=letter
+    return answer
